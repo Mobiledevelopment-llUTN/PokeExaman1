@@ -6,12 +6,12 @@ import GetPokemon from '../components/getPokemon';
 
 const InfoPokemon = ({navigation}) => {
     const valores = navigation.getState();
-    const token = valores.routes[1].params.token;
+    const url = valores.routes[1].params.url;
 
     return (
     <SafeAreaView>
         <View>
-        <GetPokemon navegar={navigation} token={token} />
+        <GetPokemon navegar={navigation} url={url} />
         </View>
     </SafeAreaView>
     );

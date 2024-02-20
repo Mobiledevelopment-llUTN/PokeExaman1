@@ -50,7 +50,7 @@ export const style_01 = StyleSheet.create({
     borderColor: '#355DA8',
     borderRadius: 10,
     borderStyle: 'solid',
-    borderWidth: 1,
+    borderWidth: 3,
     margin: 5,
     padding: 5,
     },
@@ -80,18 +80,17 @@ export const style_01 = StyleSheet.create({
         height: 140,
         width: 140,
     },
-    divPokemon:{
-
-    },
-    divTyBelong:{
-
-    },
-    divMoves:{
-
-    },
     GenText:{
         color: 'yellow',
         paddingLeft: 34,
         paddingTop: 13,
+    },
+    containerStyle : {
+        flexDirection: 'block',
+        padding: 10,
+      },
+    infoText:{
+        fontSize: 15,
+        paddingTop: 18,
     },
 });
