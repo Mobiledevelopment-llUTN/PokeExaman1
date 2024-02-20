@@ -66,7 +66,7 @@ const GetPokemons = props => {
 				keyExtractor={({id}, index) => id}
 				renderItem={({item}) => (
 				  <TouchableOpacity key={item.name} style={style_01.itemText} onPress={() => onPressViewPokemon(item.url)}>
-					<View>
+					<View style={style_01.containerStyle}>
 					  <Text style={style_01.tit_02}>{item.name}</Text>
                       <Image source={{
                         uri: `${IMAGEPATHURL}/${item.name}.png`,

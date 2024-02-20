@@ -46,13 +46,17 @@ const GetPokemon = props => {
         <Text style={style_01.tit_01}> Pokemon Information</Text>
             <View style={style_01.card}>
                 <Text style={style_01.tit_02}>{result.name}</Text>
-                <View style={style_01.containerStyle}>
-                    <Image source={{uri: `${IMAGEPATHURL}/${result.name}.png`}} style={style_01.pokeImgs}/>
-                    <Text style={style_01.tit_02}>Features</Text>
-                    <Text style={style_01.infoText}>-Code:{result.id}</Text>
-                    <Text style={style_01.infoText}>-Height:{result.height}</Text>
-                    <Text style={style_01.infoText}>-Weight:{result.weight}</Text>
-                </View>
+                    <View style={style_01.containerStyle}>
+                        <View>
+                            <Image source={{uri: `${IMAGEPATHURL}/${result.name}.png`}} style={style_01.pokeImgs}/>
+                        </View>
+                        <View style={style_01}>
+                            <Text style={style_01.tit_03}>Features</Text>
+                            <Text style={style_01.infoText}>-Code:{result.id}</Text>
+                            <Text style={style_01.infoText}>-Height:{result.height}</Text>
+                            <Text style={style_01.infoText}>-Weight:{result.weight}</Text>
+                        </View>
+                    </View>
             </View>
             <View style={style_01.card}>
                 <Text style={style_01.tit_02}>Types to Belong</Text>
@@ -64,7 +68,7 @@ const GetPokemon = props => {
                 <TouchableOpacity
                 key={item.title}>
                 <View>
-                    <Text style={style_01.infoText}>{item.type.name}</Text>
+                    <Text style={style_01.bold}>{item.type.name}</Text>
                 </View>
                 </TouchableOpacity>
             )}
@@ -79,7 +83,7 @@ const GetPokemon = props => {
                 <TouchableOpacity
                 key={item.title}>
                 <View>
-                    <Text style={style_01.infoText}>{item.move.name}</Text>
+                    <Text style={style_01.bold}>{item.move.name}</Text>
                 </View>
                 </TouchableOpacity>
             )}
