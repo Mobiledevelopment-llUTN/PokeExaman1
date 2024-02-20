@@ -16,12 +16,13 @@ import axios from 'axios';
 
 const GetPokemons = props => {
     const nav = props.navegar;
-    const [results, setData] = useState([]);
+    const Generation = props.gen;
+    const [result, setData] = useState([]);
 
     const Obtener = async () => {
     try {
-        axios.get(`${PATHURL}`).then(response => {
-        const json = response.results;
+        axios.get(`${PATHURL}/`).then(response => {
+        const json = response.data;
         setData(json.results);
         });
     } catch (error) {
@@ -33,22 +34,22 @@ const GetPokemons = props => {
     Obtener();
     }, []);
 
-    const onPressViewArticle = url => {
+    const onPressViewPokemon = url => {
     nav.navigate('InfoPokemon', {url: url});
     };
 
     return (
     <SafeAreaView>
          <FlatList
-				data={results.results}
-				keyExtractor={({url}, index) => url}
+				data={result}
+				keyExtractor={({id}, index) => id}
 				renderItem={({item}) => (
-				  <TouchableOpacity key={item.name} style={style_01.itemText} onPress={() => onPressViewArticle(results.url)}>
+				  <TouchableOpacity key={item.name} style={style_01.itemText} onPress={() => onPressViewPokemon(item.url)}>
 					<View>
 					  <Text style={style_01.tit_02}>{item.name}</Text>
                       <Image source={{
-                        uri: '`${IMAGEPATHURL}`/item.name',
-                      }}/>
+                        uri: `${IMAGEPATHURL}/${item.name}.png`,
+                      }} style={style_01.pokeImgs}/>
 					</View>
 				  </TouchableOpacity>
 				)}

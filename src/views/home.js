@@ -11,7 +11,13 @@ const Home = ({navigation}) => {
     <SafeAreaView>
         <View>
         <Image source={require('../imgs/logos/Pokemon.png')} style={{width: screenWidth, height: 160}}></Image>
-        <View style={style_01.divHeader}></View>
+        <View style={style_01.divHeader}>
+            <Text style={style_01.GenText} onClick={{}}>First Generation</Text>
+            <Text style={style_01.GenText}>Second Generation</Text>
+            <Text style={style_01.GenText}>Third Generation</Text>
+            <Text style={style_01.GenText}>Fourth Generation</Text>
+            <Text style={style_01.GenText}>Fifth Generation</Text>
+        </View>
         <Text style={style_01.tit_01}>Pokemons</Text>
         <GetPokemons navegar={navigation} />
         </View>

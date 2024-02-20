@@ -24,9 +24,10 @@ export const style_01 = StyleSheet.create({
     padding: 8,
     },
     tit_02: {
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 'bold',
-    textAlign: 'center',
+    paddingLeft: 110,
+    alignText: 'center',
     },
     tit_03: {
     marginTop: 8,
@@ -73,6 +74,24 @@ export const style_01 = StyleSheet.create({
         backgroundColor : principal,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        height: 40,
+        height: 110,
+    },
+    pokeImgs:{
+        height: 140,
+        width: 140,
+    },
+    divPokemon:{
+
+    },
+    divTyBelong:{
+
+    },
+    divMoves:{
+
+    },
+    GenText:{
+        color: 'yellow',
+        paddingLeft: 34,
+        paddingTop: 13,
     },
 });
